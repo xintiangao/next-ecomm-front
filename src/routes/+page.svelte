@@ -24,7 +24,7 @@
 	// 	}
 	// }
 
-	fetchPhotos();
+	// fetchPhotos();
 
 	let showModal = false;
 
