@@ -26,7 +26,7 @@
 
 	// fetchPhotos();
 
-	
+
 
 	let showModal = false;
 
@@ -75,7 +75,7 @@
 		});
 
 		if (resp && resp.status == 200) {
-			await fetchPhotos();
+			// await fetchPhotos();
 			closeModal();
 		} else {
 			console.log('Failed to create photo');
