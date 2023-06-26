@@ -26,6 +26,8 @@
 
 	// fetchPhotos();
 
+	
+
 	let showModal = false;
 
 	function toggleModal() {
