@@ -5,24 +5,24 @@
 	export let data;
 
 	let formErrors = {};
-	let photos = [];
+	// let photos = [];
 
-	async function fetchPhotos() {
-		let token = getTokenFromLocalStorage();
-		const resp = await fetch(PUBLIC_BACKEND_BASE_URL + '/photos', {
-			method: 'GET',
-			mode: 'cors',
-			headers: {
-				'Content-Type': 'application/json',
-				Authorization: `Bearer ${token}`
-			}
-		});
-		if (resp.ok) {
-			photos = await resp.json();
-		} else {
-			console.log('Failed to fetch photos');
-		}
-	}
+	// async function fetchPhotos() {
+	// 	let token = getTokenFromLocalStorage();
+	// 	const resp = await fetch(PUBLIC_BACKEND_BASE_URL + '/photos', {
+	// 		method: 'GET',
+	// 		mode: 'cors',
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 			Authorization: `Bearer ${token}`
+	// 		}
+	// 	});
+	// 	if (resp.ok) {
+	// 		photos = await resp.json();
+	// 	} else {
+	// 		console.log('Failed to fetch photos');
+	// 	}
+	// }
 
 	fetchPhotos();
 
