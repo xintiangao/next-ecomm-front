@@ -29,6 +29,33 @@
 
 	async function uploadImage(evt) {
 		evt.preventDefault();
+		formErrors = {
+        price: '',
+        title: '',
+        description: '',
+		}; 
+
+		if (!evt.target['file'].files[0]) {
+			formErrors['file'] = 'Please select a file.';
+		}
+
+		if (!evt.target['price'].value) {
+			formErrors.price = 'Please enter a price.';
+		} else {
+			formErrors.price = '';
+		}
+
+		if (!evt.target['title'].value) {
+			formErrors.title = 'Please enter a title.';
+		} else {
+			formErrors.title = '';
+		}
+
+		if (!evt.target['description'].value) {
+			formErrors.description = 'Please enter a description.';
+		} else {
+			formErrors.description = '';
+		}
 		loading=true;
 		const [fileName, fileUrl] = await uploadMedia(evt.target['file'].files[0]);
 		const photoData = {
